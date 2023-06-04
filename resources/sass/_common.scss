@@ -1,0 +1,137 @@
+body {
+    background: #f0f2f5;
+    min-width: 350px;
+    font-size: 0.9em;
+}
+
+a {
+    text-decoration: none;
+}
+
+.screen-title {
+    font-weight: bold;
+    font-size: 1.7em;
+    margin-bottom: 1em;
+}
+
+.content {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    padding: 1.5em 2em;
+}
+
+// .ant-btn {
+//     display: flex;
+//     align-items: center;
+// }
+
+.logo {
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.menu-trigger {
+    font-size: 18px;
+    line-height: 64px;
+    padding: 0 24px;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+        color: #1890ff;
+    }
+}
+
+.ant-layout-sider-children {
+    display: flex;
+    flex-direction: column;
+}
+
+.header-user-info {
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img {
+        width: 24px;
+        height: 24px;
+        object-fit: cover;
+        border-radius: 50%;
+        overflow: hidden;
+    }
+}
+
+.loading-wrapper {
+    position: relative;
+
+    .loading {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 9999;
+        background: rgb(255 255 255 / 90%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.ant-btn>.anticon,
+.ant-btn>.anticon+span,
+.ant-btn>span+.anticon {
+    vertical-align: middle;
+}
+
+.invalid-feedback {
+    display: block;
+}
+
+.ant-menu-item .ant-menu-item-icon,
+.ant-menu-submenu-title .ant-menu-item-icon,
+.ant-menu-item .anticon,
+.ant-menu-submenu-title .anticon,
+.ant-menu-item .ant-menu-item-icon+span,
+.ant-menu-submenu-title .ant-menu-item-icon+span,
+.ant-menu-item .anticon+span,
+.ant-menu-submenu-title .anticon+span {
+    vertical-align: middle;
+}
+
+.ant-table-thead > tr > th {
+    font-weight: bold;
+}
+
+.border-danger-select {
+    .ant-select-selector {
+        border-color: rgba(220, 53, 69, 1) !important;
+    }
+}
+
+.ant-layout-sider-collapsed .logo span {
+    display: none;
+}
+
+.border-left-title {
+    border-left: solid 5px #D9D9D9;
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+.ps-2em {
+    padding-left: 2em;
+}
+
+    //.anticon-close svg, .anticon-check svg {
+    //    margin-bottom: 0.5em;
+    //}
+
+    .larger-icon {
+        font-size: 20px;
+        color: orange;
+    }

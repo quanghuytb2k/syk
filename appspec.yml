@@ -1,0 +1,60 @@
+version: 0.0
+os: linux
+files:
+  - source: ./deploy/nginx.conf
+    destination: /etc/nginx/
+  - source: ./
+    destination: /usr/share/nginx/html/
+  - source: ./deploy/prd.env
+    destination: /usr/share/nginx/html/
+  - source: ./deploy/dev.env
+    destination: /usr/share/nginx/html/
+permissions:
+  - object: /usr/share/nginx/html
+    owner: root
+    group: root
+    mode: 755
+    type:
+      - directory
+
+  - object: /usr/share/nginx/html
+    owner: root
+    group: root
+    mode: 644
+    type:
+      - file
+
+  - object: /usr/share/nginx/html/app/storage
+    owner: root
+    group: root
+    mode: 777
+    type:
+      - directory
+
+  - object: /usr/share/nginx/html/app/storage
+    owner: root
+    group: root
+    mode: 777
+    type:
+      - file
+
+  - object: /usr/share/nginx/html/app/bootstrap/cache
+    owner: root
+    group: root
+    mode: 777
+    type:
+      - directory
+  - object: /usr/share/nginx/html/app/bootstrap/cache
+    owner: root
+    group: root
+    mode: 777
+    type:
+      - file
+hooks:
+    BeforeInstall:
+    - location: ./deploy/beforeInstall.sh
+      runas: root
+    ApplicationStart:
+    - location: ./deploy/applicationStart.sh
+      timeout: 300
+      runas: root

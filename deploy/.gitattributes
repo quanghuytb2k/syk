@@ -1,0 +1,5 @@
+dev.env merge=ours
+prd.env merge=ours
+nginx.conf merge=ours
+applicationStart.sh merge=ours
+beforeInstall.sh merge=ours
